@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PORSCHE</title>
+<style>
+    body {
+  background-image: url('2.jpg');
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+    div{
+        height: 150px;
+        width:auto;
+        border: solid beige 2px;
+        transition: height,width 1.5s,1.5s;
+    }
+    div:hover{
+        height: 320px;
+        width: 400px;
+    }
+    body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        color: antiquewhite;
+        width: 80%;
+        margin: 20px auto;
+        border: 2px solid antiquewhite; 
+        padding: 20px;
+        align-items: center;
+        background-color: black;
+    }
+    .container h1{
+        text-align: center;
+    }
+    .container button{
+        align-content: center;
+    }
+    .content {
+        border: 1px solid antiquewhite;
+        padding: 10px;
+        background-color: black;
+        text-align: center;
+    }
+
+    .content:hover{
+        height: 180px;
+        width: 380px;
+    }
+    .hidden { display: none; }
+    .visible { display: block; }
+    
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>PORSCHE</h1>
+    <div class="content">
+        <h1>Better Car For A Better Life</h1>
+            <label for="cars">Choose a car:</label>
+            <select name="cars" id="cars">
+                <option value="search">select</option>
+                <option value="911">911</option>
+                <option value="992">992</option>
+                <option value="turbo">turbo</option>
+                <option value="cgt">carrera gt</option>
+            </select>            
+    </div>
+    <div>
+        <img id="my-image" src="#" height="320" width="400">
+    </div>    
+</div>
+<script>
+    const showImageButton = document.getElementById("cars");
+    const myImage = document.getElementById("my-image");
+    console.log(myImage);
+    showImageButton.addEventListener("change", function(){
+        var values = showImageButton.value;
+        switch (values) {
+        case "search":
+            myImage.src = ""    ; 
+            break;
+        
+        case "911":
+            myImage.src = "1.webp";
+            break;
+
+        case "992":
+            myImage.src = "4.jpg";
+            break;
+        
+        case "turbo":
+            myImage.src = "5.jpg";
+            break;
+
+        case "cgt":
+            myImage.src = "6.jpg";
+            break;
+    
+        default:
+            break;
+    }
+    });
+    
+</script>
+</body>
+</html>
